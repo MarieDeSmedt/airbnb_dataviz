@@ -33,5 +33,5 @@ df2 = df1.dropna(subset=['minimum_nights', 'maximum_nights'], how='all')
 #  the initial df has 23605167 rows, 10 col
 
 # print(df1.head(5).to_string())
-
-df1.to_csv('../../data/02_intermediate/clean_calendar.csv')
+print(df1['year'].sort_values(ascending = True).head())
+# df2.to_csv('../../data/02_intermediate/clean_calendar.csv')

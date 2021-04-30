@@ -47,7 +47,8 @@ df5[obj_col.columns] = df5[obj_col.columns].replace(np.nan, 'unknown', regex=Tru
 # do index with id column
 df6 = df5.set_index('id')
 
-# print(df6.head(5).to_string())
 
+df7 = df6.groupby(by='neighbourhood').agg({'price' :  np.mean})
+print(df7.sort_values(by='price', ascending = False).head(5))
 
 df6.to_csv('../../data/02_intermediate/clean_listing.csv')
