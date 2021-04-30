@@ -1,18 +1,18 @@
 import pandas as pd
+import numpy as np
 
-df_reviews = pd.read_csv('../../data/02_intermediate/clean_reviews.csv')
-
-
+df_listing = pd.read_csv('../../data/02_intermediate/clean_listing.csv')
 
 # ####################################################################""
-# goal: display a plot of "number of listings by host"
+# goal: top 10  of reviews by host
 
-# print(df_listing.columns)
-# df1 = df_listing[['host_name', 'id']]
-# df2 = pd.DataFrame(df1['host_name'].value_counts().sort_values(ascending=False).reset_index())
-# df2.columns = ['host_name', 'nb_listing']
-# df2.to_csv('../../data/03_processed/listings_per_hosts.csv', index=False)
-#
-# print(df2.head(15).to_string())
-# print('ok')
-#
+
+df1 = df_listing[['host_id', 'host_name', "review_scores_value"]]
+df1.columns = ['id', 'name', 'score']
+
+# calculate mean review by host
+df2 = df1.groupby('id').mean()
+
+df2.to_csv('../../data/03_processed/top10_reviews.csv', index=False)
+print(df2.head(15).to_string())
+print('ok')
