@@ -1,7 +1,9 @@
 import pandas as pd
 import numpy as np
 
-df = pd.read_csv("../../data/01_raw/listings.csv")
+df = pd.read_csv("../../data/01_raw/listings_lyon.csv")
+
+
 
 #  the initial df has 64690 rows, 74 col
 
@@ -51,4 +53,4 @@ df7 = df6[df6['review_scores_value'].notna()]
 
 
 print(df7['review_scores_value'].unique())
-df7.to_csv('../../data/02_intermediate/clean_listing.csv')
+df7.to_csv('../../data/02_intermediate/clean_listings_lyon.csv')

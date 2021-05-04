@@ -33,4 +33,4 @@ df4 = df3.set_index('id')
 # print(df4.head(5).to_string())
 
 
-df4.to_csv('../../data/02_intermediate/clean_reviews.csv')
+# df4.to_csv('../../data/02_intermediate/clean_reviews.csv')
