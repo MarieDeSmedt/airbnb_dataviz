@@ -17,11 +17,6 @@ run:
   - src/d02_intermediate/top10_hosts.py
 
 
-## Question: What are the levers of profitability?
+## Question: Who are the top10 for Paris, Bordeaux, Lyon?
 
-### show notebooks
-  one notebook by graph
- 
-### show mockup
-
-### show dashboard
+show dashboards in "dashboards" directory
