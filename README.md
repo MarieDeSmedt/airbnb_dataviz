@@ -15,7 +15,6 @@ run:
 
 run:
   - src/d02_intermediate/top10_hosts.py
-  - src/d02_intermediate/top10_reviews_by_host.py
 
 
 ## Question: What are the levers of profitability?
